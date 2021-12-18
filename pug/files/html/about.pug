@@ -1,0 +1,30 @@
+extend ../../components/template.pug
+block vars
+  -var title = "About"
+  -var depth = "../"
+  -var path = depth + "css/about.css"
+  -var cta = true
+  -var intro = true
+block content
+  section.main__section
+    .skills-container
+      .skills
+        +skill("Ruby")
+        +skill("Ruby on Rails")
+        +skill("Javascript")
+        +skill("React")
+        +skill("Postgresql")
+        +skill("Git & Github")
+        +skill("Effective communication")
+        +skill("Attention to details")
+  section.main__section
+    .hobbies
+      h2.heading.heading--lg My Hobbies
+      .hobbies__grid
+        +hobbie("Rock Climbing!")
+        +hobbie_img("into_the_wild.jpg", "black and white picture of me")
+        +hobbie("Photography!")
+        //- +hobbie_img("movement.jpg", "abstract picture of a tree")
+        +hobbie_img("paullo.jpg", "architecture picture")
+        +hobbie("Travel!")
+        +hobbie_img("travel.jpg", "colorfull picture of a woman knitting")

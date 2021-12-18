@@ -1,0 +1,18 @@
+mixin article_sample(date, title, html_name="#", content_sample="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra nisl mauris felis sit vestibulum est porttitor orci.")
+  article.article
+    time.article__date(datetime="#{date[0]}-#{date[1]}-#{date[2]}") #{date[3]} #{date[2]}, #{date[0]}
+    h3.heading.heading--md=title
+    p.content.content--lg=content_sample
+    a.article__link(href="./html/articles/" + html_name) Read more 
+mixin skill(title, content="Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.")
+  .skills__item
+    img.skills__img(src="../assets/icons/check.svg", alt="check icon")
+    .skills__text
+      h3.heading.heading--xs=title 
+      p.content--md=content
+mixin hobbie(title, description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc facilisis ut ut duis velit id dolor.")
+  .hobbies__item.hobbies__text
+    h3.heading.heading--md=title
+    p.content--md=description
+mixin hobbie_img(name, alt)
+  img.hobbies__img.hobbies__item(src="../assets/images/" + name, alt=alt)

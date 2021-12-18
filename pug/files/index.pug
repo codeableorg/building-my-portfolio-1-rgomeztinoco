@@ -1,0 +1,19 @@
+extend ../components/template.pug
+block vars
+  -var title = "Home"
+  -var depth = "./"
+  -var path = depth + "css/style.css"
+  -var cta = true
+  -var intro = true
+block content
+  section.main__section.articles__section
+    .articles
+      .articles__header
+        h2.heading.heading--lg Last Articles
+        p.content.content--lg Thinks I have learned lately
+      .articles__container
+        +article_sample(["2021", "12", "13", "december"], "How to learn Ruby in 4 weeks", "how-to-learn-ruby.html")
+        +article_sample(["2021", "12", "10", "december"], "When to use map over each in Ruby")
+        +article_sample(["2021", "12", "13", "december"], "How to learn Ruby in 4 weeks")
+        +article_sample(["2021", "12", "13", "december"], "How to learn Ruby in 4 weeks")
+      a.articles__link(href= depth + "html/articles.html") More Articles

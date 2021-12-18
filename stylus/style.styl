@@ -1,0 +1,42 @@
+@import "./components/globals.styl"
+@import "./components/header.styl"
+@import "./components/cta.styl"
+@import "./components/intro.styl"
+
+.articles__section
+  background-color: var(--gray-400)
+
+.articles
+  section-container()
+  align-items: center
+  gap: 48px
+  &__header
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 0.8rem
+  &__container
+    margin: auto
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr))
+    gap: 48px
+  &__link
+    text-transform: uppercase
+    font-weight: 500
+    letter-spacing: 0.1em;
+    @extend .content--sm
+.article
+  display: flex
+  flex-direction: column
+  gap: 1.6rem
+  &__date
+    text-transform: uppercase
+    @extend .content--xs
+  &__title
+    title-font()
+    @extend .heading--md
+  &__link
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    @extend .content--sm
