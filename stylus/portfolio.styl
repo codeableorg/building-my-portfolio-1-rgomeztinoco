@@ -1,12 +1,8 @@
 @import "./components/globals.styl"
 @import "./components/header.styl"
 @import "./components/cta.styl"
-@import "./components/intro.styl"
 
-.articles__section
-  background-color: var(--gray-400)
-
-.articles
+.proyects
   section-container()
   align-items: center
   gap: 48px
@@ -21,12 +17,7 @@
     display: grid
     grid-template-columns: repeat(auto-fit, minmax(275px, 1fr))
     gap: 48px
-  &__link
-    text-transform: uppercase
-    font-weight: 500
-    letter-spacing: 0.1em
-    @extend .content--sm
-.article
+.proyect
   display: flex
   flex-wrap: wrap
   gap: 1.6rem
@@ -36,37 +27,23 @@
   &__img
     width: 100%
     object-fit: cover
-    display: none
   &__content
     margin: 2rem
     display: flex
     flex-direction: column
     justify-content: center
     gap: 1.6rem
-  &__date
-    text-transform: uppercase
-    @extend .content--xs
+  &__technologies
+    padding: 10px
+    display: flex
+    gap: 25px
+    background-color: var(--gray-500)
+    border-radius: 10px
+  &__technology
+    height: 25px
+    width: 25px
   &__link
     text-transform: uppercase
     font-weight: 500
     letter-spacing: 0.1em
     @extend .content--sm
-#highlight
-  outline: 4px solid var(--gray-400)
-  outline-offset: 10px
-#annotation
-  padding: 0 1.6rem
-  position: absolute
-  top: -25px
-  left: 20px
-  display: inline-block
-  background-color: var(--gray-500)
-  text-transform: uppercase
-  font-weight: 500
-  letter-spacing: 0.1em
-
-@media screen
-  @media (min-width: 600px)
-    .article
-      &__img
-        display: block

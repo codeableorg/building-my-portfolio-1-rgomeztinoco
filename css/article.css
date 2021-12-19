@@ -33,7 +33,7 @@ body {
 }
 a {
   text-decoration: none;
-  color: var(--primary-200);
+  color: var(--primary-300);
 }
 .content {
   font-family: var(--font-content);

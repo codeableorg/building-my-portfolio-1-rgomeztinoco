@@ -33,7 +33,7 @@ body {
 }
 a {
   text-decoration: none;
-  color: var(--primary-200);
+  color: var(--primary-300);
 }
 .content {
   font-family: var(--font-content);
@@ -76,8 +76,7 @@ a {
   font-size: 2.4rem;
   line-height: 3.2rem;
 }
-.heading--md,
-.article__title {
+.heading--md {
   font-size: 3rem;
   line-height: 3.6rem;
 }
@@ -180,7 +179,7 @@ a {
   gap: 1.6rem;
 }
 .heading--lg span {
-  color: var(--primary-500);
+  color: var(--primary-400);
   font-weight: 700;
 }
 .articles__section {
@@ -200,6 +199,7 @@ a {
   gap: 0.8rem;
 }
 .articles__container {
+  position: relative;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
@@ -212,18 +212,49 @@ a {
 }
 .article {
   display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  background-color: var(--gray-400);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.article__img {
+  width: 100%;
+  object-fit: cover;
+  display: none;
+}
+.article__content {
+  margin: 2rem;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 1.6rem;
 }
 .article__date {
   text-transform: uppercase;
 }
-.article__title {
-  font-family: var(--font-titles);
-  font-weight: 600;
-}
 .article__link {
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 0.1em;
+}
+#highlight {
+  outline: 4px solid var(--gray-400);
+  outline-offset: 10px;
+}
+#annotation {
+  padding: 0 1.6rem;
+  position: absolute;
+  top: -25px;
+  left: 20px;
+  display: inline-block;
+  background-color: var(--gray-500);
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+@media screen and (min-width: 600px) {
+  .article__img {
+    display: block;
+  }
 }

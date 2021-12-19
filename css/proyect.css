@@ -169,70 +169,54 @@ a {
 .call-to-action {
   text-align: center;
 }
-.intro {
+.proyect {
   max-width: 760px;
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: 16px;
 }
-.heading--lg span {
-  color: var(--primary-400);
-  font-weight: 700;
+.proyect__picture {
+  margin: 0 auto;
 }
-.main__section:nth-child(2) {
-  background-color: var(--gray-400);
-}
-.skills-container {
-  max-width: 760px;
-}
-.skills {
+.proyect__picture__img {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 32px;
+  max-width: 700px;
 }
-.skills__img {
-  height: 25px;
-  width: 25px;
+.proyect__picture__caption {
+  margin-top: 0.8rem;
+  text-align: center;
+  color: var(--gray-200);
 }
-.skills__item {
-  display: flex;
-  gap: 20px;
+.proyect__picture {
+  margin: 0 auto;
 }
-.skills__text {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-.hobbies {
-  display: flex;
-  flex-direction: column;
-  gap: 4.8rem;
+.proyect__picture__img {
   width: 100%;
-  align-items: center;
-  max-width: 800px;
+  max-width: 640px;
 }
-.hobbies__grid {
-  width: 100%;
-  padding: 1.6rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  gap: 1.6rem;
-  background-color: var(--gray-400);
-  border-radius: 0.8rem;
-  place-items: center;
+.proyect__picture__caption {
+  margin-top: 0.8rem;
+  text-align: center;
+  color: var(--gray-200);
 }
-.hobbies__item {
-  height: 100%;
-  width: 100%;
-  border-radius: 0.8rem;
-}
-.hobbies__img {
-  max-height: 16rem;
-  object-fit: cover;
-}
-.hobbies__text {
+.proyect__list {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
+  padding: 0 2.6rem;
+}
+.proyect__list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.proyect__list-img {
+  width: 100%;
+  max-width: 640px;
+}
+.proyect__link {
+  margin-top: 4.8rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
 }

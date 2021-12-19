@@ -1,0 +1,20 @@
+extend ../../../components/template.pug
+block vars
+  -var title = "Blog"
+  -var depth = "../../"
+  -var path = depth + "css/style.css"
+  -var cta = true
+  -var intro = false
+block content
+  section.main__section 
+    .articles
+      .articles__header
+        h2.heading.heading--lg Latest Articles
+        p.content.content--lg Thinks I have learned lately
+      .articles__container
+        +article_sample(["2021", "12", "18", "december"], "The Pale Blue Dot", "the_pale_blue_dot.html", "the_pale_blue_dot.jpg", "I'm a dot, inside of a dot, inside of a dot, inside of a dot...<br>Mi name is Ricardo i'm from Perú and this is me.", "highlight")
+        +article_sample(["2021", "12", "13", "december"], "How to learn Ruby in 4 weeks", "how-to-learn-ruby.html", "coding_laptop.jpg")
+        +article_sample(["2021", "12", "13", "december"], "How to learn Ruby in 4 weeks", "how-to-learn-ruby.html", "coding_laptop.jpg")
+        +article_sample(["2021", "12", "13", "december"], "How to learn Ruby in 4 weeks", "how-to-learn-ruby.html", "coding_laptop.jpg")   
+        +article_sample(["2021", "12", "13", "december"], "How to learn Ruby in 4 weeks", "how-to-learn-ruby.html", "coding_laptop.jpg")   
+        +article_sample(["2021", "12", "13", "december"], "How to learn Ruby in 4 weeks", "how-to-learn-ruby.html", "coding_laptop.jpg")   

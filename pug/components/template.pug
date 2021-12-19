@@ -1,13 +1,13 @@
-include ../components/config.pug
+include ./config.pug
 block vars
 doctype html
 html(lang="en")
-  include ../components/head.pug
+  include ./head.pug
   body
-   include ../components/header.pug
+   include ./header.pug
    main
     if intro 
-      include ../components/intro.pug
+      include ./intro.pug
     block content
     if cta
-      include ../components/cta.pug
+      include ./cta.pug

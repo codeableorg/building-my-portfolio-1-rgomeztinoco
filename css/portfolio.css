@@ -44,7 +44,8 @@ a {
   line-height: 1.6rem;
 }
 .content--sm,
-.button {
+.button,
+.proyect__link {
   font-size: 1.4rem;
   line-height: 2rem;
 }
@@ -169,70 +170,58 @@ a {
 .call-to-action {
   text-align: center;
 }
-.intro {
+.proyects {
   max-width: 760px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+.proyects__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+.proyects__container {
+  position: relative;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  gap: 48px;
+}
+.proyect {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  background-color: var(--gray-400);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.proyect__img {
+  width: 100%;
+  object-fit: cover;
+}
+.proyect__content {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   gap: 1.6rem;
 }
-.heading--lg span {
-  color: var(--primary-400);
-  font-weight: 700;
+.proyect__technologies {
+  padding: 10px;
+  display: flex;
+  gap: 25px;
+  background-color: var(--gray-500);
+  border-radius: 10px;
 }
-.main__section:nth-child(2) {
-  background-color: var(--gray-400);
-}
-.skills-container {
-  max-width: 760px;
-}
-.skills {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 32px;
-}
-.skills__img {
+.proyect__technology {
   height: 25px;
   width: 25px;
 }
-.skills__item {
-  display: flex;
-  gap: 20px;
-}
-.skills__text {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-.hobbies {
-  display: flex;
-  flex-direction: column;
-  gap: 4.8rem;
-  width: 100%;
-  align-items: center;
-  max-width: 800px;
-}
-.hobbies__grid {
-  width: 100%;
-  padding: 1.6rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  gap: 1.6rem;
-  background-color: var(--gray-400);
-  border-radius: 0.8rem;
-  place-items: center;
-}
-.hobbies__item {
-  height: 100%;
-  width: 100%;
-  border-radius: 0.8rem;
-}
-.hobbies__img {
-  max-height: 16rem;
-  object-fit: cover;
-}
-.hobbies__text {
-  display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
+.proyect__link {
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.1em;
 }

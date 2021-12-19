@@ -2,7 +2,7 @@ extend ../../../components/template.pug
 block vars
   -var title = "How to learn Ruby"
   -var depth = "../../"
-  -var path = depth + "css/how-to-learn-ruby.css"
+  -var path = depth + "css/article.css"
   -var cta = true
 block content
   section.main__section
@@ -10,7 +10,7 @@ block content
       time.article__date(datetime="2021-10-13") December 13, 2021
       h1.heading.heading--md How to learn Ruby in 4 weeks
       figure.article__picture
-        img.article__picture__img(src="../../../../assets/images/coding_laptop.jpg", alt="laptop with code in the screen")
+        img.article__picture__img(src= depth + "assets/images/coding_laptop.jpg", alt="laptop with code in the screen")
         figcaption.content--sm.article__picture__caption Photo by James Harrison on Unsplash
       p.content--lg Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bibendum eros rhoncus ullamcorper varius iaculis purus. Cursus eget mi nisl, eu in arcu ultrices. At adipiscing habitasse ut libero, consectetur elementum. Eget sit sit ut viverra ullamcorper venenatis mi at ridiculus. Vitae, quis parturient natoque donec scelerisque at quis at et. Et, tincidunt ut diam adipiscing egestas adipiscing semper tristique interdum. Amet, tortor ipsum pellentesque sed fringilla egestas id. Non aliquam magnis malesuada tortor in duis tortor praesent.
       ul.article__list 
@@ -21,4 +21,4 @@ block content
       p.content--lg Volutpat, elementum mi <strong>faucibus non feugiat vitae sed</strong>. Proin eu morbi massa pretium facilisis nulla enim tellus facilisis. Ante id semper pretium, quam pretium. Aliquam, tellus nunc viverra nec duis accumsan suspendisse. Hac nisl, eu enim, risus gravida nibh. Elit aliquet pretium iaculis elementum gravida at. Vitae auctor id proin sagittis.
       blockquote.content--xl.article__quote “Lorem ipsum dolor sit amet, consectetur adipiscing elit. A vitae vulputate lorem quisque in pharetra”
       p.content--lg Facilisi nisl orci non odio tortor, nulla diam faucibus. Blandit tortor egestas nisl leo blandit. Elementum est ac vestibulum nam egestas velit tincidunt quis. At posuere ut viverra vestibulum dictum placerat curabitur. Ac sit in diam euismod tristique tempus sapien volutpat convallis. Gravida ornare egestas faucibus magna facilisis pellentesque ac tempor felis.
-      a.article__link.content--sm(href=depth) Back to Home
+      a.article__link.content--sm(href= depth + "html/articles") Back to Articles
