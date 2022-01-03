@@ -239,12 +239,69 @@ a {
   align-items: center;
   gap: 0.8rem;
 }
+.proyects__filters {
+  width: 100%;
+  padding: 1.6rem;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  background-color: var(--gray-400);
+  border-radius: 1rem;
+}
+.proyects__filters .filters-header {
+  display: flex;
+  justify-content: space-between;
+}
+.proyects__filters details summary {
+  position: relative;
+  cursor: pointer;
+}
+.proyects__filters details summary::marker {
+  color: transparent;
+}
+.proyects__filters details summary::after {
+  position: absolute;
+  right: 0;
+  bottom: 4px;
+  display: inline-block;
+  content: "";
+  height: 20px;
+  width: 20px;
+  background: url("../assets/icons/cross.svg") center no-repeat;
+}
 .proyects__container {
   position: relative;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
   gap: 48px;
+}
+.form__checkbox {
+  display: flex;
+  gap: 1rem;
+}
+.form__checkbox input {
+  appearance: none;
+  min-width: 16px;
+  min-height: 16px;
+  margin: 2px;
+  align-self: flex-start;
+  border: 1px solid var(--gray-300);
+  border-radius: 4px;
+  animation: uncheck 0.6s ease;
+  animation-fill-mode: forwards;
+}
+.form__checkbox input:checked {
+  border: none;
+  background-image: url("../assets/icons/check.svg");
+  background-size: 9px 9px;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: check 0.75s linear;
+  animation-fill-mode: forwards;
+}
+.form__checkbox input:focus-visible {
+  outline: 2px solid var(--primary-300);
+  outline-offset: 2px;
 }
 .proyect {
   display: flex;
@@ -280,4 +337,100 @@ a {
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 0.1em;
+}
+@-moz-keyframes check {
+  0% {
+    transform: scale(1);
+    background-color: var(--gray-500);
+  }
+  50% {
+    transform: scale(1.2);
+    background-color: var(--primary-300);
+    outline: 2px solid var(--primary-300);
+    outline-offset: 2px;
+  }
+  100% {
+    transform: scale(1);
+    background-color: var(--primary-300);
+  }
+}
+@-webkit-keyframes check {
+  0% {
+    transform: scale(1);
+    background-color: var(--gray-500);
+  }
+  50% {
+    transform: scale(1.2);
+    background-color: var(--primary-300);
+    outline: 2px solid var(--primary-300);
+    outline-offset: 2px;
+  }
+  100% {
+    transform: scale(1);
+    background-color: var(--primary-300);
+  }
+}
+@-o-keyframes check {
+  0% {
+    transform: scale(1);
+    background-color: var(--gray-500);
+  }
+  50% {
+    transform: scale(1.2);
+    background-color: var(--primary-300);
+    outline: 2px solid var(--primary-300);
+    outline-offset: 2px;
+  }
+  100% {
+    transform: scale(1);
+    background-color: var(--primary-300);
+  }
+}
+@keyframes check {
+  0% {
+    transform: scale(1);
+    background-color: var(--gray-500);
+  }
+  50% {
+    transform: scale(1.2);
+    background-color: var(--primary-300);
+    outline: 2px solid var(--primary-300);
+    outline-offset: 2px;
+  }
+  100% {
+    transform: scale(1);
+    background-color: var(--primary-300);
+  }
+}
+@-moz-keyframes uncheck {
+  0% {
+    background-color: var(--primary-300);
+  }
+  100% {
+    background-color: var(--gray-500);
+  }
+}
+@-webkit-keyframes uncheck {
+  0% {
+    background-color: var(--primary-300);
+  }
+  100% {
+    background-color: var(--gray-500);
+  }
+}
+@-o-keyframes uncheck {
+  0% {
+    background-color: var(--primary-300);
+  }
+  100% {
+    background-color: var(--gray-500);
+  }
+}
+@keyframes uncheck {
+  0% {
+    background-color: var(--primary-300);
+  }
+  100% {
+    background-color: var(--gray-500);
+  }
 }
