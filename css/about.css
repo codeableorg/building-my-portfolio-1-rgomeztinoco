@@ -17,28 +17,6 @@
   --font-titles: "Montserrat", sans-serif;
   --font-content: "Inter", sans-serif;
 }
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-html {
-  font-size: 62.5%;
-  color: var(--gray-100);
-}
-body {
-  background-color: var(--gray-500);
-  font-family: var(--font-content);
-  font-weight: 400;
-}
-a {
-  text-decoration: none;
-  color: var(--primary-300);
-}
-.content {
-  font-family: var(--font-content);
-  font-weight: 400;
-}
 .content--xs {
   font-size: 1.2rem;
   line-height: 1.6rem;
@@ -61,8 +39,6 @@ a {
   line-height: 2.8rem;
 }
 .heading {
-  font-family: var(--font-titles);
-  font-weight: 600;
   color: var(--gray-100);
 }
 .heading--xs {
@@ -86,30 +62,36 @@ a {
   line-height: 4.8rem;
 }
 .button {
+  display: inline-block;
   padding: 0.8rem 1.6rem;
   font-weight: 500;
-  color: var(--gray-100);
+  color: var(--gray-500);
   letter-spacing: 0.1em;
   border: none;
   border-radius: 4px;
   box-shadow: 0px 1px 2px rgba(0,0,0,0.05);
   text-transform: uppercase;
-  background-color: var(--primary-400);
+  background-color: var(--primary-300);
+  transition: all 0.25s;
 }
-.button:focus {
-  outline: 2px solid var(--primary-400);
+.button:focus-visible {
+  outline: 2px solid var(--primary-300);
   outline-offset: 3px;
 }
 .button:hover {
-  background-color: var(--primary-300);
+  background-color: var(--primary-200);
+}
+.button.button:active {
+  transform: translateY(0.2em);
 }
 .button--secondary {
+  color: var(--gray-100);
   background-color: var(--secondary-400);
 }
 .button--secondary:hover {
   background-color: var(--secondary-500);
 }
-.button--secondary:focus {
+.button--secondary:focus-visible {
   outline: 2px solid var(--secondary-400);
   outline-offset: 3px;
 }
@@ -120,9 +102,27 @@ a {
 .button--subtle:hover {
   background-color: var(--gray-100);
 }
-.button--subtle:focus {
+.button--subtle:focus-visible {
   outline: 2px solid var(--gray-200);
   outline-offset: 3px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  color: var(--gray-100);
+}
+body {
+  background-color: var(--gray-500);
+  font-family: var(--font-content);
+  font-weight: 400;
+}
+a {
+  text-decoration: none;
+  color: var(--primary-300);
 }
 .main__section {
   padding: 6.4rem 1.6rem;
@@ -133,13 +133,26 @@ a {
 }
 .header {
   padding: 3.2rem 1.6rem;
-  padding-bottom: 0px;
   margin: 0 auto;
   max-width: 760px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 16px;
+  background-color: var(--gray-500);
+}
+.header nav {
+  width: 100vw;
+  background-color: var(--gray-500);
+  display: none;
+}
+.header #cross {
+  display: none;
+}
+.header #menu {
+  height: 25px;
+  width: 25px;
+  align-self: center;
 }
 .header__img {
   height: 32px;
@@ -154,9 +167,52 @@ a {
 .header__nav {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   gap: 32px;
+}
+.header__nav-link {
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.5s;
+}
+.header__nav-link:hover {
+  background-color: var(--gray-400);
+}
+.header .header__nav-open {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 80px;
+  padding: 3.2rem 0;
+  padding-top: 1.6rem;
+}
+.header__nav-open ~ #cross {
+  display: block;
+}
+.header__nav-open ~ #menu {
+  display: none;
+}
+@media screen and (min-width: 640px) {
+  .header nav {
+    display: block;
+    width: min-content;
+    margin: auto 0;
+  }
+  .header #cross {
+    display: none;
+  }
+  .header #menu {
+    display: none;
+  }
+  .header__nav {
+    flex-direction: row;
+  }
+  .header .header__nav-open {
+    position: static;
+    padding: 0;
+  }
 }
 .cta {
   padding: 6.4rem 1.6rem;

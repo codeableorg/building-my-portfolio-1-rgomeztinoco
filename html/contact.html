@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Montserrat:wght@600;700&amp;display=swap">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__item"><img class="header__img" src="../assets/icons/avatar.svg" alt="avatar"><a class="heading heading--sm" href="../">Ricardo Gómez</a></div>
+      <nav class="header__item header__nav-open">
+        <ul class="header__nav">
+          <li class="header__nav-item"> <a class="content--md header__nav-link" href="../html/articles">Blog</a></li>
+          <li class="header__nav-item"> <a class="content--md header__nav-link" href="../html/portfolio">Portfolio</a></li>
+          <li class="header__nav-item"> <a class="content--md header__nav-link" href="../html/about.html">About</a></li>
+          <li class="header__nav-item"><a class="button button--subtle" href="../html/contact.html">Contact</a></li>
+        </ul>
+      </nav><img id="menu" src="../assets/icons/menu.svg" alt="menu icon"><img id="cross" src="../assets/icons/cross.svg" alt="cross icon">
+    </header>
+    <main>
+      <section class="main__section">
+        <div class="form">
+          <div class="form__heading">
+            <h1 class="heading heading--lg">Contact</h1>
+            <p class="content--lg">Looking to expand your team? Or do you need a web developer for a specific project? If I can help you in any way don't hesitate to fill this form.</p>
+          </div>
+          <form class="form__container" action="">
+            <div class="form__block">
+              <div class="form__item">
+                <label class="content--xs input__label" for="first-name">First Name</label>
+                <input class="form__input" id="first-name" name="first-name" type="text"/>
+              </div>
+              <div class="form__item">
+                <label class="content--xs input__label" for="last-name">Last Name</label>
+                <input class="form__input" id="last-name" name="last-name" type="text"/>
+              </div>
+            </div>
+            <div class="form__item">
+              <label class="content--xs input__label" for="company">Company</label>
+              <input class="form__input" id="company" name="company" type="text"/>
+            </div>
+            <div class="form__item">
+              <label class="content--xs input__label" for="email">Email</label>
+              <input class="form__input" id="email" name="email" type="email"/>
+            </div>
+            <div class="form__block">
+              <div class="form__item">
+                <label class="content--xs input__label" for="country">Country</label>
+                <select class="form__input" id="country" name="country"> 
+                  <option value="" selected="selected" disabled="disabled">Select</option>
+                  <option value="PE">Perú</option>
+                  <option value="CL">Chile</option>
+                  <option value="VZ">Venezuela</option>
+                  <option value="MX">México</option>
+                  <option value="AR">Argentina</option>
+                </select>
+              </div>
+              <div class="form__item">
+                <label class="content--xs input__label" for="phone">Phone Number</label>
+                <input class="form__input" id="phone" name="phone" type="tel"/>
+              </div>
+            </div>
+            <div class="form__item">
+              <h2 class="content--md">How can I help you?</h2>
+              <div class="form__checkbox-container">
+                <div class="form__checkbox">
+                  <input type="checkbox" name="job" id="job"/>
+                  <div class="form__checkbox__text">
+                    <label class="content--sm" for="job">Job offer</label>
+                    <p class="content--sm helper-text">If you are looking to expand your team</p>
+                  </div>
+                </div>
+                <div class="form__checkbox">
+                  <input type="checkbox" name="proyect" id="proyect"/>
+                  <div class="form__checkbox__text">
+                    <label class="content--sm" for="proyect">Proyect offer</label>
+                    <p class="content--sm helper-text">You need help with a specific project</p>
+                  </div>
+                </div>
+                <div class="form__checkbox">
+                  <input type="checkbox" name="collab" id="collab"/>
+                  <div class="form__checkbox__text">
+                    <label class="content--sm" for="collab">Collaboration</label>
+                    <p class="content--sm helper-text">To work together creating something new</p>
+                  </div>
+                </div>
+                <div class="form__checkbox">
+                  <input type="checkbox" name="other" id="other"/>
+                  <div class="form__checkbox__text">
+                    <label class="content--sm" for="other">Other</label>
+                    <p class="content--sm helper-text"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="button" type="submit">Contact me!</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

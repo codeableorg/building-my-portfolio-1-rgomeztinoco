@@ -12,7 +12,7 @@ mixin article_sample(date, title, html_name="", img=undefined, content_sample="L
 
 mixin skill(title, content="Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.")
   .skills__item
-    img.skills__img(src="../assets/icons/check.svg", alt="check icon")
+    img.skills__img(src="../assets/icons/check_with_container.svg", alt="check icon")
     .skills__text
       h3.heading.heading--xs=title 
       p.content--md=content
@@ -49,3 +49,22 @@ mixin proyect_sample(title, technologies, description, img, alt, html_name)
       h3.heading.heading--md=title
       p.content--lg !{description}
       a.proyect__link(href= depth + "./html/portfolio/" + html_name) Read more
+
+mixin form_input(id, content, type="text",options=undefined)
+  .form__item
+    label.content--xs.input__label(for=id)=content
+    if type=="select"
+      select.form__input(id=id, name=id) 
+        option(value="", selected disabled) Select
+        each option in options
+          option(value=option[0])=option[1] 
+    else
+      input.form__input(id=id, name=id, type=type)
+
+mixin form__checkbox(id, label, helper_text)
+  .form__checkbox
+    input(type="checkbox", name=id, id=id)
+    .form__checkbox__text
+      label.content--sm(for=id)=label
+      p.content--sm.helper-text=helper_text 
+      
