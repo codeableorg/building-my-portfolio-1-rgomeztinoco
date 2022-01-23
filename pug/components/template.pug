@@ -1,0 +1,13 @@
+include ./config.pug
+block vars
+doctype html
+html(lang="en")
+  include ./head.pug
+  body
+   include ./header.pug
+   main
+    if intro 
+      include ./intro.pug
+    block content
+    if cta
+      include ./cta.pug

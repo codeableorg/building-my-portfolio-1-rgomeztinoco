@@ -1,0 +1,36 @@
+.button
+  display: inline-block
+  padding: .8rem 1.6rem
+  font-weight: 500
+  color: var(--gray-500)
+  letter-spacing: 0.1em
+  border: none
+  border-radius: 4px
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05)
+  text-transform: uppercase
+  background-color: var(--primary-300)
+  transition: all 0.25s
+  @extend .content--sm
+  &:focus-visible
+    outline: 2px solid var(--primary-300)
+    outline-offset: 3px
+  &:hover
+    background-color: var(--primary-200)
+  &&:active
+    transform: translateY(0.2em)
+  &--secondary
+    color: var(--gray-100)
+    background-color: var(--secondary-400)
+    &:hover
+      background-color: var(--secondary-500)
+    &:focus-visible
+      outline: 2px solid var(--secondary-400)
+      outline-offset: 3px
+  &--subtle
+    background-color: var(--gray-200)
+    color: var(--gray-400)
+    &:hover
+      background-color: var(--gray-100)
+    &:focus-visible
+      outline: 2px solid var(--gray-200)
+      outline-offset: 3px

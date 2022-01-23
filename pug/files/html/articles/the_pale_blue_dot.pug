@@ -1,0 +1,73 @@
+extend ../../../components/template.pug
+block vars
+  -var title = "The Pale Blue Dot"
+  -var depth = "../../"
+  -var path = depth + "css/article.css"
+  -var cta = true
+block content
+  section.main__section
+    article.article 
+      time.article__date(datetime="2021-10-18") December 18, 2021
+      h1.heading.heading--md The Pale Blue Dot
+      figure.article__picture
+        img.article__picture__img(src= depth + "assets/images/the_pale_blue_dot.jpg", alt="laptop with code in the screen")
+        figcaption.content--sm.article__picture__caption Photo by Nasa "The Pale Blue Dot"
+      p.content--lg
+        | I'm a dot, inside of a dot, inside of a dot, inside of a dot... We all are just that.
+        | Mi name is Ricardo i'm from Perú and this is me.
+        br
+        | I think a lot, and recently I have realized that if I never write all these things, 
+        | it is very likely that they will stay in just that, thoughts.
+        br
+        | I invite you to finish this blog, although considering everything that exist on the 
+        | internet, it is indeed just that. A dot.
+        br
+        br
+        | A few years ago, I came across this picture. It was taken by the Voyager 1 spacecraft in 1990. 
+        | It is the farthest image we have of the earth. At this distance, the earth is just a dot. 
+        br
+        | Do you get to see it? No, it is not dust on your screen. It's the Earth. 
+        | That tiny dot of 0.12px in size. That's here, it's our home, it's us. 
+        br
+        | By now, you must be wondering what is this blog about? 
+        | What's the point of all this? But bear with me, everything has a reason.
+        br
+        | This image puts into perspective everything we are. 
+        | It makes me feel so insignificant and at the same time so special. 
+        | How can something so small stand out in that photo? 
+        | Because everything else is practically black, and the earth is that single dot 
+        | that shines in the void of infinity. I think it is that duality of sensations that 
+        | it causes me, that makes it so special to me.
+        br
+        br
+        | To paraphrase Sagan. Think about all the people who have been here before us from the 
+        | beginning of the human species, all their problems, all their feelings, all their wounds, 
+        | all their mistakes and successes; have occurred in that little pale blue dot.
+        br
+        | It makes me think about how alone we are in the universe, which is sad to think about, 
+        | but also a wake-up call. No one is going to save us from ourselves. 
+        | For now, we only have this tiny little piece of the universe.
+        br
+        | This is where I wanted to get, this is me. A dot within this pale blue dot. 
+        | At the beginning, I told you that I don't want everything I think to remain only thoughts. 
+        | That's because I care about this dot.
+
+      blockquote.content--xl.article__quote “In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves.” Carl Sagan.
+
+      p.content--lg
+        | Today, it is inconceivable to me to deny that we as a species are destroying ourselves, 
+        | and we are destroying our home, the earth. But I also think that we as a species are extraordinary, 
+        | and we have the potential to do amazing things, like take that photo. 
+        br
+        | Well, that's what I'm here for, so we can change and keep the only home we've had so far. 
+        | To achieve this, we must reinvent ourselves once again as a species and achieve changes at all 
+        | levels of our lives. This is the space where I will write about anything that I believe that 
+        | could do a positive change. And this is me just trying.
+        br
+        br
+        br
+        | If you liked the image and what it means to me, I invite you to watch this 
+        a(href="https://youtu.be/xYmDyHC4Oc0", target="_blank") video
+        | , in which Carl Sagan explains it to you much better than I did. 
+
+      a.article__link.content--sm(href= depth + "html/articles") Back to Articles

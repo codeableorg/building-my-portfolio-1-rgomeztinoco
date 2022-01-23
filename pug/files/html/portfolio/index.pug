@@ -1,0 +1,30 @@
+extend ../../../components/template.pug
+block vars
+  -var title = "Blog"
+  -var depth = "../../"
+  -var path = depth + "css/portfolio.css"
+  -var cta = true
+  -var intro = false
+block content
+  section.main__section
+    .proyects 
+      .proyects__header
+        h1.heading.heading--lg Portfolio
+        p.content--lg Latest proyects
+      .proyects__filters
+        .filters-header
+          h3.heading.heading--sm Filters
+          img(src= depth + "assets/icons/cross.svg", alt="close")
+        details
+          summary
+            h4.heading.heading--xs Proyect Type
+          +form__checkbox("collab", "Collaboration", "To work together creating something new")
+          +form__checkbox("collab", "Collaboration", "To work together creating something new")
+          +form__checkbox("collab", "Collaboration", "To work together creating something new")
+      .proyects__container
+        +proyect_sample("CalenCLI", ["ruby", "terminal", "git", "github"], "CalenCLI is a calendar for the comand-line interface.<br>It has the following functionalities: List, Create, Show, Update, Delete", "calencli.png", "proyect calencli in the terminal", "calencli.html")
+        +proyect_sample("CalenCLI", ["ruby", "terminal", "git", "github"], "CalenCLI is a calendar for the comand-line interface.<br>It has the following functionalities: List, Create, Show, Update, Delete", "calencli.png", "proyect calencli in the terminal", "calencli.html")
+        +proyect_sample("CalenCLI", ["ruby", "terminal", "git", "github"], "CalenCLI is a calendar for the comand-line interface.<br>It has the following functionalities: List, Create, Show, Update, Delete", "calencli.png", "proyect calencli in the terminal", "calencli.html")
+        +proyect_sample("CalenCLI", ["ruby", "terminal", "git", "github"], "CalenCLI is a calendar for the comand-line interface.<br>It has the following functionalities: List, Create, Show, Update, Delete", "calencli.png", "proyect calencli in the terminal", "calencli.html")
+        +proyect_sample("CalenCLI", ["ruby", "terminal", "git", "github"], "CalenCLI is a calendar for the comand-line interface.<br>It has the following functionalities: List, Create, Show, Update, Delete", "calencli.png", "proyect calencli in the terminal", "calencli.html")
+        +proyect_sample("CalenCLI", ["ruby", "terminal", "git", "github"], "CalenCLI is a calendar for the comand-line interface.<br>It has the following functionalities: List, Create, Show, Update, Delete", "calencli.png", "proyect calencli in the terminal", "calencli.html")

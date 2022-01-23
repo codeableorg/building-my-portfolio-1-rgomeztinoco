@@ -1,0 +1,28 @@
+extend ../../components/template.pug
+block vars
+  -var title = "Contact"
+  -var depth = "../"
+  -var path = depth + "css/contact.css"
+block content
+  section.main__section
+    .form
+      .form__heading
+        h1.heading.heading--lg Contact
+        p.content--lg Looking to expand your team? Or do you need a web developer for a specific project? If I can help you in any way don't hesitate to fill this form.
+      form.form__container(action="")
+        .form__block
+          +form_input("first-name", "First Name")
+          +form_input("last-name", "Last Name")
+        +form_input("company", "Company")
+        +form_input("email", "Email", "email")
+        .form__block
+          +form_input("country", "Country", "select", [["PE", "Perú"], ["CL", "Chile"], ["VZ", "Venezuela"], ["MX", "México"], ["AR", "Argentina"]])
+          +form_input("phone", "Phone Number", "tel")
+        .form__item
+          h2.content--md How can I help you?
+          .form__checkbox-container
+            +form__checkbox("job", "Job offer", "If you are looking to expand your team")
+            +form__checkbox("proyect", "Proyect offer", "You need help with a specific project")
+            +form__checkbox("collab", "Collaboration", "To work together creating something new")
+            +form__checkbox("other", "Other")
+        button.button(type="submit") Contact me!

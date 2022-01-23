@@ -1,0 +1,70 @@
+mixin article_sample(date, title, html_name="", img=undefined, content_sample="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra nisl mauris felis sit vestibulum est porttitor orci.", id=undefined)
+  article.article(id=id)
+    if id
+      p.content--sm#annotation This is me
+    if img
+      img.article__img(src = depth + "assets/images/" + img, alt="")
+    .article__content
+      time.article__date(datetime="#{date[0]}-#{date[1]}-#{date[2]}") #{date[3]} #{date[2]}, #{date[0]}
+      h3.heading.heading--md=title
+      p.content--lg !{content_sample}
+      a.article__link(href= depth + "./html/articles/" + html_name) Read more
+
+mixin skill(title, content="Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.")
+  .skills__item
+    img.skills__img(src="../assets/icons/check_with_container.svg", alt="check icon")
+    .skills__text
+      h3.heading.heading--xs=title 
+      p.content--md=content
+
+mixin hobbie(title, description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc facilisis ut ut duis velit id dolor.")
+  .hobbies__item.hobbies__text
+    h3.heading.heading--md=title
+    p.content--md=description
+
+mixin hobbie_img(name, alt)
+  img.hobbies__img.hobbies__item(src="../assets/images/" + name, alt=alt)
+
+mixin proyect_sample(title, technologies, description, img, alt, html_name)
+  article.proyect 
+    img.proyect__img(src= depth + "assets/images/proyects/" + img, alt=alt)
+    .proyect__content
+      .proyect__technologies
+        each technology in technologies
+          case technology
+            when "js"
+              img.proyect__technology(src= depth + "assets/icons/technologies/javascript.svg", alt="javascript logo")
+            when "git"
+              img.proyect__technology(src= depth + "assets/icons/technologies/git.svg", alt="git logo")
+            when "github"
+              img.proyect__technology(src= depth + "assets/icons/technologies/github.svg", alt="github logo")
+            when "terminal"
+              img.proyect__technology(src= depth + "assets/icons/technologies/terminal-solid.svg", alt="terminal logo")
+            when "ruby"
+              img.proyect__technology(src= depth + "assets/icons/technologies/ruby_bn.svg", alt="ruby logo")
+            when "html"
+              img.proyect__technology(src= depth + "assets/icons/technologies/", alt="html logo")
+            when "css"
+              img.proyect__technology(src= depth + "assets/icons/technologies/", alt="css logo")
+      h3.heading.heading--md=title
+      p.content--lg !{description}
+      a.proyect__link(href= depth + "./html/portfolio/" + html_name) Read more
+
+mixin form_input(id, content, type="text",options=undefined)
+  .form__item
+    label.content--xs.input__label(for=id)=content
+    if type=="select"
+      select.form__input(id=id, name=id) 
+        option(value="", selected disabled) Select
+        each option in options
+          option(value=option[0])=option[1] 
+    else
+      input.form__input(id=id, name=id, type=type)
+
+mixin form__checkbox(id, label, helper_text)
+  .form__checkbox
+    input(type="checkbox", name=id, id=id)
+    .form__checkbox__text
+      label.content--sm(for=id)=label
+      p.content--sm.helper-text=helper_text 
+      

@@ -1,1 +1,75 @@
-# Happy coding!
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Montserrat:wght@600;700&amp;display=swap">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__item"><img class="header__img" src="./assets/icons/avatar.svg" alt="avatar"><a class="heading heading--sm" href="./">Ricardo Gómez</a></div>
+      <nav class="header__item header__nav-open">
+        <ul class="header__nav">
+          <li class="header__nav-item"> <a class="content--md header__nav-link" href="./html/articles">Blog</a></li>
+          <li class="header__nav-item"> <a class="content--md header__nav-link" href="./html/portfolio">Portfolio</a></li>
+          <li class="header__nav-item"> <a class="content--md header__nav-link" href="./html/about.html">About</a></li>
+          <li class="header__nav-item"><a class="button button--subtle" href="./html/contact.html">Contact</a></li>
+        </ul>
+      </nav><img id="menu" src="./assets/icons/menu.svg" alt="menu icon"><img id="cross" src="./assets/icons/cross.svg" alt="cross icon">
+    </header>
+    <main>
+      <section class="main__section">
+        <div class="intro">
+          <h2 class="heading heading--lg">Hi! I’m <span>Ricardo</span>, professional web developer and educator</h2>
+          <p class="content content--lg">I specialize in teaching and building full-stack web applications using Ruby on Rails and React. I commit my work to <a href="https://github.com/rgomeztinoco">Github</a> and use <a href="https://twitter.com/rgomeztinoco">Twitter</a> to keep in touch with the last trends.</p>
+        </div>
+      </section>
+      <section class="main__section articles__section">
+        <div class="articles">
+          <div class="articles__header">
+            <h2 class="heading heading--lg">Latest Articles</h2>
+            <p class="content content--lg">Thinks I have learned lately</p>
+          </div>
+          <div class="articles__container">
+            <article class="article">
+              <div class="article__content">
+                <time class="article__date" datetime="#{date[0]}-#{date[1]}-#{date[2]}">december 10, 2021</time>
+                <h3 class="heading heading--md">When to use map over each in Ruby</h3>
+                <p class="content--lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra nisl mauris felis sit vestibulum est porttitor orci.</p><a class="article__link" href="././html/articles/">Read more</a>
+              </div>
+            </article>
+            <article class="article">
+              <div class="article__content">
+                <time class="article__date" datetime="#{date[0]}-#{date[1]}-#{date[2]}">december 13, 2021</time>
+                <h3 class="heading heading--md">How to learn Ruby in 4 weeks</h3>
+                <p class="content--lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra nisl mauris felis sit vestibulum est porttitor orci.</p><a class="article__link" href="././html/articles/how-to-learn-ruby.html">Read more</a>
+              </div>
+            </article>
+            <article class="article">
+              <div class="article__content">
+                <time class="article__date" datetime="#{date[0]}-#{date[1]}-#{date[2]}">december 13, 2021</time>
+                <h3 class="heading heading--md">How to learn Ruby in 4 weeks</h3>
+                <p class="content--lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra nisl mauris felis sit vestibulum est porttitor orci.</p><a class="article__link" href="././html/articles/how-to-learn-ruby.html">Read more</a>
+              </div>
+            </article>
+            <article class="article">
+              <div class="article__content">
+                <time class="article__date" datetime="#{date[0]}-#{date[1]}-#{date[2]}">december 13, 2021</time>
+                <h3 class="heading heading--md">How to learn Ruby in 4 weeks</h3>
+                <p class="content--lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra nisl mauris felis sit vestibulum est porttitor orci.</p><a class="article__link" href="././html/articles/how-to-learn-ruby.html">Read more</a>
+              </div>
+            </article>
+          </div><a class="articles__link" href="./html/articles">More Articles</a>
+        </div>
+      </section>
+      <section class="main__section cta">
+        <h2 class="heading heading--xl call-to-action">Can I help you?</h2><a class="button button--secondary" href="./html/contact.html">Get in touch!</a>
+      </section>
+    </main>
+  </body>
+</html>

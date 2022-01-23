@@ -1,0 +1,55 @@
+@import "./components/globals.styl"
+@import "./components/header.styl"
+@import "./components/cta.styl"
+@import "./components/intro.styl"
+
+.main__section:nth-child(2)
+  background-color: var(--gray-400)
+
+.skills-container
+  max-width: 760px
+
+.skills
+  // margin: 0 auto
+  width: 100%
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+  gap: 32px
+  &__img
+    height: 25px
+    width: 25px
+  &__item
+    display: flex
+    gap: 20px
+  &__text
+    display: flex
+    flex-direction: column
+    gap: 1.2rem
+
+.hobbies
+  display: flex
+  flex-direction: column
+  gap: 4.8rem
+  width: 100%
+  align-items: center
+  max-width: 800px
+  &__grid
+    width: 100%
+    padding: 1.6rem
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr))
+    gap: 1.6rem
+    background-color: var(--gray-400)
+    border-radius: 0.8rem
+    place-items: center
+  &__item
+    height: 100%
+    width: 100%
+    border-radius: 0.8rem
+  &__img
+    max-height: 16rem 
+    object-fit: cover
+  &__text
+    display: flex
+    flex-direction: column
+    gap: 1.6rem
